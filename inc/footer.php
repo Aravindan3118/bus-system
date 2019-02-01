@@ -4,7 +4,7 @@
       <!-- Anything you want -->
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2019 <a href="#">Bus System</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; 2019 <a href="#">Bus Route system</a>.</strong> All rights reserved.
   </footer>
 
   <!-- Control Sidebar -->
@@ -91,5 +91,20 @@
 <!-- AdminLTE App -->
 <script src="inc/includes/dist/js/adminlte.min.js"></script>
 
+<script src="inc/includes/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="inc/includes/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script>
+  $(function () {
+    $('#example1').DataTable()
+    $('#example2').DataTable({
+      'paging'      : true,
+      'lengthChange': false,
+      'searching'   : true,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : false
+    })
+  })
+</script>
 </body>
 </html>

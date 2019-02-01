@@ -1,36 +1,38 @@
-<?php 
-	include "db_config.php";
+<?php
+
+	include_once "db_config.php";
 	class User{
 		protected $db;
 		public function __construct(){
 			$this->db = new DB_con();
 			$this->db = $this->db->ret_obj();
 		}
-		
-		
+
+
 		public function insert($table,$values,$rows = null)
     {
             $insert = 'INSERT INTO '.$table;
             if($rows != null)
             {
-                $insert .= ' ('.$rows.')'; 
+                $insert .= ' ('.$rows.')';
             }
- 
+
             for($i = 0; $i < count($values); $i++)
             {
                 if(is_string($values[$i]))
                     $values[$i] = '"'.$values[$i].'"';
             }
             $values = implode(',',$values);
-            $insert .= ' VALUES ('.$values.')';         
+            $insert .= ' VALUES ('.$values.')';
            $result = $this->db->query($insert) or die($this->db->error);
+           return true;
     }
-	
-		
-			
+
+
+
 	public function select($table, $rows = '*', $where = null, $union = null, $where1 = null, $order = null)
     {
-		
+
         $q = 'SELECT '.$rows.' FROM '.$table;
         if($where != null)
 		{
@@ -45,12 +47,12 @@
 		  $q .= ' WHERE '.$where1;
 		}
 		if($order != null)
-        {    
+        {
 		$q .= ' ORDER BY '.$order;
         }
-		
+		// echo $q;
 		$result= $this->db->query($q);
-		
+
 		while($row= mysqli_fetch_array($result))
 		{
 			$array[]=$row;
@@ -63,8 +65,8 @@
 		{
 		return false;
 		}
-	
-    }		
+
+    }
 	public function update($table,$rows,$where)
     {
             for($i = 0; $i < count($where); $i++)
@@ -81,10 +83,10 @@
                 }
             }
             $where = implode('=',$where);
-             
-             
+
+
             $update = 'UPDATE '.$table.' SET ';
-            $keys = array_keys($rows); 
+            $keys = array_keys($rows);
             for($i = 0; $i < count($rows); $i++)
            {
                 if(is_string($rows[$keys[$i]]))
@@ -95,20 +97,25 @@
                 {
                     $update .= $keys[$i].'='.$rows[$keys[$i]];
                 }
-                 
-            
+
+
                 if($i != count($rows)-1)
                 {
-                    $update .= ','; 
+                    $update .= ',';
                 }
             }
             $update .= ' WHERE '.$where;
-			
+
      $result = $this->db->query($update) or die($this->db->error);
-       
+
     }
-	
-	
-	
-	
+
+    public function mailer($send_to,$subject,$body)
+    {
+        include_once 'mailtest.php';
+    }
+
+
+
+
 }
