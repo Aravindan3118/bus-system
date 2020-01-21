@@ -15,7 +15,9 @@
         <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="index.php">Home<span class="sr-only">(current)</span></a></li>
-            <li><a href="booked_seats.php">My Seats</a></li>
+            <li><a href="changed_route.php">Changed Route</a></li>
+            <li><a href="change_bus.php">Change Bus</a></li>
+            <li><a href="today_ride_status.php">Today ride Status</a></li>
           </ul>
         </div>
         <!-- /.navbar-collapse -->

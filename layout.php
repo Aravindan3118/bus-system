@@ -1,17 +1,14 @@
 <?php 
-	include './admin/inc/header.php';
-	include './admin/inc/sidebar.php';
+ include_once './session.php';
+    include_once './inc/services/class.user.php';
+    $user = new User();
+ include './inc/head_ass.php';
+    include './inc/header.php';
+    include './inc/sidebar.php';
  ?>
    <div class="content-wrapper">
     <section class="content-header">
-      <h1>
-        Page Header
-        <small>Optional description</small>
-      </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-        <li class="active">Here</li>
-      </ol>
+       
     </section>
 
     <!-- Main content -->
@@ -22,5 +19,5 @@
   </div>
 
   <?php 
-  include './admin/inc/footer.php';
+  include './inc/footer.php';
    ?>

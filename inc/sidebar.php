@@ -32,11 +32,12 @@
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">HEADER</li>
         <!-- Optionally, you can add icons to the links -->
-        <li class="active"><a href="index.php"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
+        <li ><a href="index.php"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
         <?php
-        if($_SESSION['user_type'] == 'superadmin'){
+        if($_SESSION['user_type'] == 'admin'){
           ?>
-            <li><a href="college_master.php"><i class="fa fa-link"></i> <span>Manage Colleges</span></a></li>
+            <li><a href="manage_bus.php"><i class="fa fa-link"></i> <span>Manage Bus</span></a></li>
+            <li><a href="manage_driver.php"><i class="fa fa-link"></i> <span>Manage Driver</span></a></li>
           <?php
         }
         ?>

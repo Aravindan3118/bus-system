@@ -24,6 +24,7 @@
             }
             $values = implode(',',$values);
             $insert .= ' VALUES ('.$values.')';
+            // echo $insert;
            $result = $this->db->query($insert) or die($this->db->error);
            return true;
     }
@@ -105,7 +106,7 @@
                 }
             }
             $update .= ' WHERE '.$where;
-
+            // echo $update;
      $result = $this->db->query($update) or die($this->db->error);
 
     }

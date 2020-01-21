@@ -7,21 +7,17 @@
 
       $email = $_POST['email'];
       $password = $_POST['password'];
-      $table='users';
+      $table='driver_master';
 	    $rows='*';
-	    $where='user_email="'.$_POST['email'].'"  and password="'.$password.'"';
+	    $where='driver_email="'.$_POST['email'].'"  and driver_password="'.$password.'"';
       $login = $user->select($table,$rows,$where);
       if($login)
 	{
         $_SESSION['login_user'] = $email;
-        $_SESSION['user_type'] = $login[0]['user_type'];
+        $_SESSION['user_type'] = 'driver';
         $_SESSION['user_id'] = $login[0]['id'];
-        $_SESSION['stu_bus_id'] = $login[0]['bus_id'];
-        
-        // if ($_SESSION['user_type']=='admin') {
-        //   header("location:index.php");
-        // }
-        if ($_SESSION['user_type']=='admin' ||$_SESSION['user_type']=='student') {
+        $_SESSION['driver_bus_id'] = $login[0]['bus_id'];
+        if ($_SESSION['user_type']=='admin' || $_SESSION['user_type']=='student' || $_SESSION['user_type']=='driver') {
           header("location:index.php");
         }
     }
@@ -36,7 +32,7 @@
   
     <section class="content ">
     <div class="register-box-body col-md-4 col-md-offset-4">
-    <p class="login-box-msg">Login</p>
+    <p class="login-box-msg">Driver Login</p>
 
     <form action="" method="post">
       <div class="form-group has-feedback">
