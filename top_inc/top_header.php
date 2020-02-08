@@ -18,6 +18,7 @@
             <li><a href="changed_route.php">Changed Route</a></li>
             <li><a href="change_bus.php">Change Bus</a></li>
             <li><a href="today_ride_status.php">Today ride Status</a></li>
+            <li><a href="today_ride_location.php">Today ride Status Location</a></li>
           </ul>
         </div>
         <!-- /.navbar-collapse -->

@@ -42,6 +42,13 @@
         }
         ?>
         <?php
+        if($_SESSION['user_type'] == 'driver'){
+          ?>
+            <li><a href="driver_location.php"><i class="fa fa-link"></i> <span>Location Emit</span></a></li>
+          <?php
+        }
+        ?>
+        <?php
         if($_SESSION['user_type'] == 'college'){
           ?>
             <li><a href="departments_master.php"><i class="fa fa-link"></i> <span>Manage Departments</span></a></li>
