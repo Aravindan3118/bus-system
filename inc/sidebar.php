@@ -44,7 +44,7 @@
         <?php
         if($_SESSION['user_type'] == 'driver'){
           ?>
-            <li><a href="driver_location.php"><i class="fa fa-link"></i> <span>Location Emit</span></a></li>
+            <!-- <li><a href="driver_location.php"><i class="fa fa-link"></i> <span>Location Emit</span></a></li> -->
           <?php
         }
         ?>
