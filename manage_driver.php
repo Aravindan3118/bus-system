@@ -27,7 +27,7 @@
                   <th>Driver Contact</th>
                   <th>Driver Email</th>
                   <th>Bus</th>
-                  <th>Action</th>
+                  <!-- <th>Action</th> -->
                 </tr>
                 </thead>
                 <tbody>
@@ -45,7 +45,7 @@
                   </td>
                   <td><?php echo $d['driver_email'];?></td>
                   <td><?php echo $d['bus_id'];?></td>
-                  <td><a href="manage_route.php?bus_id=<?php echo $d['id']; ?>" class="btn btn-primary">Edit</a></td>
+                  <!-- <td><a href="manage_route.php?bus_id=<?php echo $d['id']; ?>" class="btn btn-primary">Edit</a></td> -->
                 </tr>
                     <?php }} else{
                         ?>
@@ -63,7 +63,7 @@
                    <th>Driver Contact</th>
                   <th>Driver Email</th>
                   <th>Bus</th>
-                  <th>Action</th>
+                  <!-- <th>Action</th> -->
                 </tr>
                 </tfoot>
               </table>

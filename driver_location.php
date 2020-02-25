@@ -10,7 +10,7 @@ include './inc/sidebar.php';
 ?>
 
 <div class="content-wrapper">
-    <section class="content-header">
+    <!-- <section class="content-header">
         <h1>
             Page Header
             <small>Optional description</small>
@@ -19,7 +19,7 @@ include './inc/sidebar.php';
             <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
             <li class="active">Here</li>
         </ol>
-    </section>
+    </section> -->
 
     <!-- Main content -->
     <section class="content container-fluid">

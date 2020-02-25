@@ -1,9 +1,8 @@
  <footer class="main-footer">
     <div class="container">
       <div class="pull-right hidden-xs">
-        <b>Version</b> 2.4.0
       </div>
-      <strong>Copyright &copy; 2019 <a href="#">Bus System</a>.</strong> All rights reserved.
+      <strong>Copyright &copy; 2020 <a href="#">Bus System</a>.</strong> All rights reserved.
       reserved.
     </div>
     <!-- /.container -->

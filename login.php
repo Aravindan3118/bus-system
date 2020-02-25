@@ -16,12 +16,13 @@
         $_SESSION['login_user'] = $email;
         $_SESSION['user_type'] = $login[0]['user_type'];
         $_SESSION['user_id'] = $login[0]['id'];
+        $_SESSION['username'] = $login[0]['username'];
         $_SESSION['stu_bus_id'] = $login[0]['bus_id'];
         
-        // if ($_SESSION['user_type']=='admin') {
-        //   header("location:index.php");
-        // }
-        if ($_SESSION['user_type']=='admin' ||$_SESSION['user_type']=='student') {
+        if ($_SESSION['user_type']=='admin') {
+          header("location:manage_bus.php");
+        }
+        if ($_SESSION['user_type']=='student') {
           header("location:index.php");
         }
     }

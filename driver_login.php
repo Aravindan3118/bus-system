@@ -16,6 +16,7 @@
         $_SESSION['login_user'] = $email;
         $_SESSION['user_type'] = 'driver';
         $_SESSION['user_id'] = $login[0]['id'];
+        $_SESSION['username'] = $login[0]['driver_name'];
         $_SESSION['driver_bus_id'] = $login[0]['bus_id'];
         if ($_SESSION['user_type']=='admin' || $_SESSION['user_type']=='student' || $_SESSION['user_type']=='driver') {
           header("location:index.php");
